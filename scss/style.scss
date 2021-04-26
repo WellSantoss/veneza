@@ -1,0 +1,160 @@
+@import 'reset';
+@import 'var-mix';
+
+// font-family: 'DM Serif Display', serif;
+// font-family: 'Roboto', sans-serif;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2 {
+  font-family: 'DM Serif Display', serif;
+}
+
+// Header
+header {
+  @include background(inicio-bg);
+  @include flex-center;
+  h1 {
+    font-size: 9em;
+    color: $white;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 4em;
+    color: $white;
+  }
+  @include responsive(xl) {
+    @include background(inicio-bgx2);
+  }
+  @include responsive(ms) {
+    h1 {
+      font-size: 6.5em;
+    }
+    h2 {
+      font-size: 3em;
+    }
+  }
+  @include responsive(s) {
+    h1 {
+      font-size: 4em;
+    }
+    h2 {
+      font-size: 2em;
+    }
+  }
+}
+
+// Sections
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  div:first-child {
+    grid-column: 1;
+  }
+  div:last-child {
+    grid-column: 2;
+  }
+  @include responsive(ms) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  &.reverse {
+    @include responsive(ms) {
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+    }
+  }
+}
+
+
+
+.content {
+  padding: 0 60px;
+  @include flex-center;
+  @include responsive(ml) {
+    padding: 0 30px;
+  }
+  @include responsive(ms) {
+    height: calc(100vh - 165px);
+    padding: 0 30px;
+  }
+  @include responsive(s) {
+    height: auto;
+  }
+  h1 {
+    font-size: 1.5em;
+    @include line-height(24);
+    margin-bottom: 38px;
+    &::after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: $primary-color;
+    }
+  }
+  p {
+    @include line-height(16);
+  }
+  p.bold {
+    font-weight: 700;
+    margin-bottom: -16px;
+  }
+  p + p {
+    margin-top: 24px;
+  }
+}
+
+@for $i from 1 through 5 {
+  .sec-#{$i} .img {
+    @include background(img-#{$i});
+    @include responsive(xl) {
+      @include background(img-#{$i}x2);
+    }
+    @include responsive(ms) {
+      height: 165px;
+    }
+    @include responsive(s) {
+      display: none;
+    }
+  }
+}
+
+// Footer
+footer {
+  @include background(footer-bg);
+  color: $white;
+  .flex {
+    @include flex-center;
+    height: calc(100% - 20px);
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    p {
+      font-size: 1.125em;
+      @include line-height(16);
+      margin-bottom: 36px;
+    }
+    h3 {
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 12px;
+    a {
+      color: $white;
+      font-weight: 600;
+    }
+  }
+}

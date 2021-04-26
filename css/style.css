@@ -1,0 +1,401 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2 {
+  font-family: 'DM Serif Display', serif;
+}
+
+header {
+  background: url("../img/inicio-bg.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  font-size: 9em;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+header h2 {
+  font-size: 4em;
+  color: #FFF;
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    background: url("../img/inicio-bgx2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header h1 {
+    font-size: 6.5em;
+  }
+  header h2 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 553px) {
+  header h1 {
+    font-size: 4em;
+  }
+  header h2 {
+    font-size: 2em;
+  }
+}
+
+section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+section div:first-child {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+section div:last-child {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+@media screen and (max-width: 767px) {
+  section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section.reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.content {
+  padding: 0 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1059px) {
+  .content {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    height: calc(100vh - 165px);
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 553px) {
+  .content {
+    height: auto;
+  }
+}
+
+.content h1 {
+  font-size: 1.5em;
+  line-height: 2.25em;
+  margin-bottom: 38px;
+}
+
+.content h1::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #FFB100;
+}
+
+.content p {
+  line-height: 1.5em;
+}
+
+.content p.bold {
+  font-weight: 700;
+  margin-bottom: -16px;
+}
+
+.content p + p {
+  margin-top: 24px;
+}
+
+.sec-1 .img {
+  background: url("../img/img-1.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+
+@media screen and (min-width: 1440px) {
+  .sec-1 .img {
+    background: url("../img/img-1x2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sec-1 .img {
+    height: 165px;
+  }
+}
+
+@media screen and (max-width: 553px) {
+  .sec-1 .img {
+    display: none;
+  }
+}
+
+.sec-2 .img {
+  background: url("../img/img-2.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+
+@media screen and (min-width: 1440px) {
+  .sec-2 .img {
+    background: url("../img/img-2x2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sec-2 .img {
+    height: 165px;
+  }
+}
+
+@media screen and (max-width: 553px) {
+  .sec-2 .img {
+    display: none;
+  }
+}
+
+.sec-3 .img {
+  background: url("../img/img-3.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+
+@media screen and (min-width: 1440px) {
+  .sec-3 .img {
+    background: url("../img/img-3x2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sec-3 .img {
+    height: 165px;
+  }
+}
+
+@media screen and (max-width: 553px) {
+  .sec-3 .img {
+    display: none;
+  }
+}
+
+.sec-4 .img {
+  background: url("../img/img-4.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+
+@media screen and (min-width: 1440px) {
+  .sec-4 .img {
+    background: url("../img/img-4x2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sec-4 .img {
+    height: 165px;
+  }
+}
+
+@media screen and (max-width: 553px) {
+  .sec-4 .img {
+    display: none;
+  }
+}
+
+.sec-5 .img {
+  background: url("../img/img-5.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+
+@media screen and (min-width: 1440px) {
+  .sec-5 .img {
+    background: url("../img/img-5x2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sec-5 .img {
+    height: 165px;
+  }
+}
+
+@media screen and (max-width: 553px) {
+  .sec-5 .img {
+    display: none;
+  }
+}
+
+footer {
+  background: url("../img/footer-bg.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  color: #FFF;
+}
+
+footer .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: calc(100% - 20px);
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+footer .flex p {
+  font-size: 1.125em;
+  line-height: 1.5em;
+  margin-bottom: 36px;
+}
+
+footer .flex h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+footer p {
+  text-align: center;
+  font-size: 12px;
+}
+
+footer p a {
+  color: #FFF;
+  font-weight: 600;
+}
+/*# sourceMappingURL=style.css.map */

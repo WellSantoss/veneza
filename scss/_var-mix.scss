@@ -1,0 +1,71 @@
+// Cores
+$primary-color: #FFB100;
+$black: #212121;
+$white: #FFF;
+
+// Estilos
+@mixin background($nome) {
+  background: url("../img/#{$nome}.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin line-height($size) {
+  line-height: calc-line-height($size) + em;
+}
+
+@function calc-line-height($size) {
+  @return ($size * 1.5) / 16;
+}
+
+// Responsivo
+$xl-device: 1440px;
+$l-device: 1060px;
+$ml-device: 768px;
+$ms-device: 554px;
+$s-device: 425px;
+$xs-device: 320px;
+
+@mixin responsive($size) {
+  @if $size == xl{
+    @media screen and (min-width: #{$xl-device}) {
+      @content;
+    }
+  }
+  @else if $size == l{
+    @media screen and (min-width: #{$l-device}) and (max-width: #{$xl-device - 1}) {
+      @content;
+    }
+  }
+  @else if $size == ml{
+    @media screen and (min-width: #{$ml-device}) and (max-width: #{$l-device - 1}) {
+      @content;
+    }
+  }
+  @else if $size == ms{
+    @media screen and (max-width: #{$ml-device - 1}) {
+      @content;
+    }
+  }
+  @else if $size == s{
+    @media screen and (max-width: #{$ms-device - 1}) {
+      @content;
+    }
+  }
+  // @else if $size == xs{
+  //   @media screen and (min-width: #{$xs-device}) and (max-width: #{$s-device - 1}) {
+  //     @content;
+  //   }
+  // }
+  // @else if $size == xxs{
+  //   @media screen and (max-width: #{$xs-device - 1}) {
+  //     @content;
+  //   }
+  // }
+}

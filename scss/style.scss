@@ -4,6 +4,10 @@
 // font-family: 'DM Serif Display', serif;
 // font-family: 'Roboto', sans-serif;
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -106,6 +110,20 @@ footer {
       color: $white;
       font-weight: 600;
     }
+  }
+}
+
+nav {
+  position: fixed;
+  left: calc(50% - 10px);
+  top: calc(100vh - 60px);
+  animation: loop 2s infinite;
+}
+
+nav.rotate {
+  top: calc(0px + 30px);
+  a img{
+    transform: rotate(180deg);
   }
 }
 

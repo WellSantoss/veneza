@@ -95,32 +95,6 @@ header h2 {
   color: #FFF;
 }
 
-@media screen and (min-width: 1440px) {
-  header {
-    background: url("../img/inicio-bgx2.jpg") no-repeat center;
-    background-size: cover;
-    height: 100vh;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  header h1 {
-    font-size: 6.5em;
-  }
-  header h2 {
-    font-size: 3em;
-  }
-}
-
-@media screen and (max-width: 553px) {
-  header h1 {
-    font-size: 4em;
-  }
-  header h2 {
-    font-size: 2em;
-  }
-}
-
 section {
   display: -ms-grid;
   display: grid;
@@ -139,35 +113,8 @@ section div:last-child {
   grid-column: 2;
 }
 
-@media screen and (max-width: 767px) {
-  section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  section.reverse {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-}
-
 .content {
-  padding: 0 60px;
+  padding: 0 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,25 +124,6 @@ section div:last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1059px) {
-  .content {
-    padding: 0 30px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .content {
-    height: calc(100vh - 165px);
-    padding: 0 30px;
-  }
-}
-
-@media screen and (max-width: 553px) {
-  .content {
-    height: auto;
-  }
 }
 
 .content h1 {
@@ -231,50 +159,10 @@ section div:last-child {
   height: 100vh;
 }
 
-@media screen and (min-width: 1440px) {
-  .sec-1 .img {
-    background: url("../img/img-1x2.jpg") no-repeat center;
-    background-size: cover;
-    height: 100vh;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .sec-1 .img {
-    height: 165px;
-  }
-}
-
-@media screen and (max-width: 553px) {
-  .sec-1 .img {
-    display: none;
-  }
-}
-
 .sec-2 .img {
   background: url("../img/img-2.jpg") no-repeat center;
   background-size: cover;
   height: 100vh;
-}
-
-@media screen and (min-width: 1440px) {
-  .sec-2 .img {
-    background: url("../img/img-2x2.jpg") no-repeat center;
-    background-size: cover;
-    height: 100vh;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .sec-2 .img {
-    height: 165px;
-  }
-}
-
-@media screen and (max-width: 553px) {
-  .sec-2 .img {
-    display: none;
-  }
 }
 
 .sec-3 .img {
@@ -283,50 +171,10 @@ section div:last-child {
   height: 100vh;
 }
 
-@media screen and (min-width: 1440px) {
-  .sec-3 .img {
-    background: url("../img/img-3x2.jpg") no-repeat center;
-    background-size: cover;
-    height: 100vh;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .sec-3 .img {
-    height: 165px;
-  }
-}
-
-@media screen and (max-width: 553px) {
-  .sec-3 .img {
-    display: none;
-  }
-}
-
 .sec-4 .img {
   background: url("../img/img-4.jpg") no-repeat center;
   background-size: cover;
   height: 100vh;
-}
-
-@media screen and (min-width: 1440px) {
-  .sec-4 .img {
-    background: url("../img/img-4x2.jpg") no-repeat center;
-    background-size: cover;
-    height: 100vh;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .sec-4 .img {
-    height: 165px;
-  }
-}
-
-@media screen and (max-width: 553px) {
-  .sec-4 .img {
-    display: none;
-  }
 }
 
 .sec-5 .img {
@@ -335,31 +183,12 @@ section div:last-child {
   height: 100vh;
 }
 
-@media screen and (min-width: 1440px) {
-  .sec-5 .img {
-    background: url("../img/img-5x2.jpg") no-repeat center;
-    background-size: cover;
-    height: 100vh;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .sec-5 .img {
-    height: 165px;
-  }
-}
-
-@media screen and (max-width: 553px) {
-  .sec-5 .img {
-    display: none;
-  }
-}
-
 footer {
   background: url("../img/footer-bg.jpg") no-repeat center;
   background-size: cover;
   height: 100vh;
   color: #FFF;
+  padding: 0 20px;
 }
 
 footer .flex {
@@ -397,5 +226,151 @@ footer p {
 footer p a {
   color: #FFF;
   font-weight: 600;
+}
+
+@media screen and (min-width: 1400px) {
+  header {
+    background: url("../img/inicio-bgx2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+  }
+  .sec-1 .img {
+    background: url("../img/img-1x2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+  }
+  .sec-2 .img {
+    background: url("../img/img-2x2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+  }
+  .sec-3 .img {
+    background: url("../img/img-3x2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+  }
+  .sec-4 .img {
+    background: url("../img/img-4x2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+  }
+  .sec-5 .img {
+    background: url("../img/img-5x2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+  }
+  footer {
+    background: url("../img/footer-bgx2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+  }
+  .content {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  section.reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .sec-1 .img {
+    height: 165px;
+  }
+  .sec-2 .img {
+    height: 165px;
+  }
+  .sec-3 .img {
+    height: 165px;
+  }
+  .sec-4 .img {
+    height: 165px;
+  }
+  .sec-5 .img {
+    height: 165px;
+  }
+  .content {
+    height: calc(100vh - 165px);
+    padding: 0 20px;
+  }
+  .content h1 {
+    margin-bottom: 24px;
+  }
+  .content p {
+    line-height: 1.3125em;
+  }
+  .content p.bold {
+    margin-bottom: -8px;
+  }
+  .content p + p {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 6em;
+  }
+  header h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header h1 {
+    font-size: 4.5em;
+  }
+  header h2 {
+    font-size: 2em;
+  }
+  .sec-1 .img {
+    display: none;
+  }
+  .sec-2 .img {
+    display: none;
+  }
+  .sec-3 .img {
+    display: none;
+  }
+  .sec-4 .img {
+    display: none;
+  }
+  .sec-5 .img {
+    display: none;
+  }
+  section {
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .content {
+    height: auto;
+  }
+  .content p {
+    line-height: 1.5em;
+  }
+  .content p.bold {
+    margin-bottom: -16px;
+  }
+  .content p + p {
+    margin-top: 24px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

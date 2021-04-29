@@ -14,6 +14,6 @@ Resultado final: https://wellsantoss.github.io/veneza/
 
 ## Tecnologias utilizadas
 Utilizei as seguintes tecnologias durante desenvolvimento:
-- HTML5;
-- SASS;
+- HTML;
+- SASS/CSS;
 - JavaScript;

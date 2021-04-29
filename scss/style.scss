@@ -30,25 +30,6 @@ header {
     font-size: 4em;
     color: $white;
   }
-  @include responsive(xl) {
-    @include background(inicio-bgx2);
-  }
-  @include responsive(ms) {
-    h1 {
-      font-size: 6.5em;
-    }
-    h2 {
-      font-size: 3em;
-    }
-  }
-  @include responsive(s) {
-    h1 {
-      font-size: 4em;
-    }
-    h2 {
-      font-size: 2em;
-    }
-  }
 }
 
 // Sections
@@ -62,34 +43,11 @@ section {
   div:last-child {
     grid-column: 2;
   }
-  @include responsive(ms) {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  &.reverse {
-    @include responsive(ms) {
-      flex-direction: column-reverse;
-      justify-content: flex-end;
-    }
-  }
 }
 
-
-
 .content {
-  padding: 0 60px;
+  padding: 0 30px;
   @include flex-center;
-  @include responsive(ml) {
-    padding: 0 30px;
-  }
-  @include responsive(ms) {
-    height: calc(100vh - 165px);
-    padding: 0 30px;
-  }
-  @include responsive(s) {
-    height: auto;
-  }
   h1 {
     font-size: 1.5em;
     @include line-height(24);
@@ -117,15 +75,6 @@ section {
 @for $i from 1 through 5 {
   .sec-#{$i} .img {
     @include background(img-#{$i});
-    @include responsive(xl) {
-      @include background(img-#{$i}x2);
-    }
-    @include responsive(ms) {
-      height: 165px;
-    }
-    @include responsive(s) {
-      display: none;
-    }
   }
 }
 
@@ -133,6 +82,7 @@ section {
 footer {
   @include background(footer-bg);
   color: $white;
+  padding: 0 20px;
   .flex {
     @include flex-center;
     height: calc(100% - 20px);
@@ -158,3 +108,5 @@ footer {
     }
   }
 }
+
+@import 'responsive';
